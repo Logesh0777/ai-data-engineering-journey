@@ -61,3 +61,55 @@ Identified high-value customers based on city and annual spending.
 ### Key Learning
 
 Learned how to translate multiple business requirements into SQL conditions.
+
+## Day 3 — LIKE, NULL & Text Searching
+
+### Topics Learned
+
+- LIKE
+- NOT LIKE
+- % wildcard
+- _ wildcard
+- IS NULL
+- IS NOT NULL
+- Text searching
+- Combining LIKE with AND
+- Data quality filtering
+- ORDER BY and LIMIT with text filters
+
+### Practical Exercises
+
+- Find names starting with a character
+- Find names ending with a character
+- Find names containing specific text
+- Exclude names containing specific text
+- Identify missing city values
+- Filter records with available city information
+- Combine text and numerical conditions
+
+### Business Challenge
+
+Created a customer marketing query that filters customers based on:
+
+- Customer name
+- City
+- Annual spending
+- Missing data
+- Sorting
+- Top-N selection
+
+### Assessment
+
+Day 3 Assessment completed.
+
+Final correction test: **Passed**
+
+### Key Learning
+
+SQL clause order:
+
+SELECT  
+FROM  
+WHERE  
+ORDER BY  
+LIMIT
