@@ -113,3 +113,53 @@ FROM
 WHERE  
 ORDER BY  
 LIMIT
+
+## Day 4 — Aggregate Functions & GROUP BY
+
+### Topics Learned
+
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- GROUP BY
+- HAVING
+- Aggregate functions with WHERE
+- Multiple aggregate functions
+- ORDER BY with aggregate results
+- LIMIT with grouped results
+
+### What I Practiced
+
+- Counting customers
+- Calculating total customer spending
+- Calculating average spending
+- Finding maximum and minimum spending
+- Grouping customers by city
+- Grouping customers by state
+- Filtering grouped results using HAVING
+- Sorting aggregated results
+- Finding top-N groups
+
+### Business Analysis Queries
+
+I practiced answering questions such as:
+
+- How many customers are there?
+- How many customers are from a particular city/state?
+- What is the total spending?
+- What is the average spending?
+- Which city has the highest total spending?
+- Which states have spending above a threshold?
+- Which cities have at least 2 customers?
+- What are the top 2 cities by average customer spending?
+
+### Key Learning
+
+#### WHERE vs HAVING
+
+WHERE filters individual rows:
+
+```sql
+WHERE annual_spend > 60000
