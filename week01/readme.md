@@ -264,3 +264,91 @@ Completed all seven assessment questions covering grouped analysis, filtering, a
 ### Key Learning
 
 SQL aggregation helps turn individual records into meaningful business insights, such as customer counts, city-wise spending, state-wise performance, and top-performing locations.
+
+## Day 6 — SQL Revision & Business Analysis
+
+### Topics Practiced
+
+- `SELECT`, `FROM` and `WHERE`
+- `AND` and `OR`
+- Parentheses for combining conditions
+- `IN` and `BETWEEN`
+- `LIKE` for text searching
+- `COUNT()`, `SUM()` and `AVG()`
+- `GROUP BY` and `HAVING`
+- `ORDER BY` and `DESC`
+- `LIMIT` for Top-N analysis
+- Translating business requirements into SQL queries
+
+### Practical Exercises
+
+1. Find the top four customers from Tamil Nadu or Karnataka within a spending range.
+2. Combine city and spending conditions using `AND`, `OR`, and parentheses.
+3. Calculate state-wise customer counts and total spending.
+4. Find the top two cities by average spending using filtering and grouping.
+5. Identify the top two cities for high-value customers using multiple filters and aggregate conditions.
+
+### Main Business Challenge
+
+**Objective:** Identify the top two cities for high-value customers.
+
+Requirements:
+- Customer name contains lowercase `a`.
+- Annual spending is greater than ₹40,000.
+- Calculate customer count, total spending, and average spending by city.
+- Include cities with at least two qualifying customers.
+- Require total spending above ₹100,000.
+- Sort by total spending from highest to lowest.
+- Return only the top two cities.
+
+**Concepts Used:** `LIKE`, `WHERE`, `COUNT()`, `SUM()`, `AVG()`, `GROUP BY`, `HAVING`, `ORDER BY`, and `LIMIT`.
+
+### Key Learning
+
+#### AND, OR, and Parentheses
+
+- `AND` requires both conditions to be true.
+- `OR` allows either condition to be true.
+- Parentheses make complex filtering logic explicit.
+
+#### WHERE vs HAVING
+
+- `WHERE` filters individual rows before grouping.
+- `HAVING` filters groups after aggregation.
+
+#### SQL Query Flow
+
+```text
+FROM
+  ↓
+WHERE
+  ↓
+GROUP BY
+  ↓
+HAVING
+  ↓
+SELECT
+  ↓
+ORDER BY
+  ↓
+LIMIT
+```
+
+### Day 6 Assessment
+
+**Final business challenge: Passed**
+
+### Skills Checklist
+
+- [x] Filter using multiple conditions.
+- [x] Combine `AND` and `OR` correctly.
+- [x] Use parentheses to control condition grouping.
+- [x] Apply aggregate functions.
+- [x] Group and filter aggregated results.
+- [x] Sort aggregate results.
+- [x] Retrieve Top-N results.
+- [x] Translate business requirements into SQL.
+
+### Key Takeaway
+
+Accurate SQL requires more than valid syntax. The query must also match every business requirement, including the correct filters, thresholds, grouping conditions, sorting direction, and result limit.
