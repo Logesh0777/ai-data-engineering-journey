@@ -352,3 +352,78 @@ LIMIT
 ### Key Takeaway
 
 Accurate SQL requires more than valid syntax. The query must also match every business requirement, including the correct filters, thresholds, grouping conditions, sorting direction, and result limit.
+
+## Day 7 — CASE WHEN & Conditional Logic
+
+### Topics Learned
+
+- `CASE WHEN`
+- `THEN`, `ELSE` and `END`
+- Creating conditional categories
+- Multiple conditions using `AND`
+- Setting numerical thresholds
+- Ordering conditions from most specific to least specific
+- Combining `CASE` with `WHERE`
+- Combining `CASE` with `ORDER BY` and `LIMIT`
+
+### Practical Exercises
+
+- Classify customers by annual spending.
+- Create Premium, Regular and Budget categories.
+- Create Platinum, Gold, Silver and Bronze spending levels.
+- Use multiple conditions inside `CASE WHEN`.
+- Apply spending categories to selected states.
+- Retrieve top customers using `ORDER BY` and `LIMIT`.
+- Filter results to show only qualifying spending categories.
+
+### Main Business Concept
+
+**Objective:** Categorize customers based on their annual spending and identify high-value customers.
+
+`CASE WHEN` creates a calculated category for each row. `WHERE` controls which rows are returned.
+
+### Key Learning
+
+- `CASE` starts the conditional expression.
+- `WHEN` checks a condition.
+- `THEN` specifies the result when the condition is true.
+- `ELSE` supplies the default result.
+- `END` finishes the expression.
+- SQL uses the result of the first matching `WHEN`.
+- Conditions should be ordered carefully to avoid misclassification.
+
+### Example SQL Structure
+
+```sql
+SELECT customer_name,
+       annual_spend,
+       CASE
+           WHEN annual_spend >= 100000 THEN 'Platinum'
+           WHEN annual_spend >= 75000 THEN 'Gold'
+           WHEN annual_spend >= 50000 THEN 'Silver'
+           ELSE 'Bronze'
+       END AS spending_category
+FROM customer;
+```
+
+### Day 7 Assessment
+
+**Final score: 48/50 — 96%**
+
+Final correction completed successfully.
+
+### Skills Checklist
+
+- [x] Use `CASE WHEN` to create categories.
+- [x] Apply multiple spending thresholds.
+- [x] Combine conditions using `AND`.
+- [x] Order conditions correctly.
+- [x] Create meaningful calculated column aliases.
+- [x] Combine categories with `WHERE`.
+- [x] Sort results with `ORDER BY DESC`.
+- [x] Return the top N rows using `LIMIT`.
+- [x] Translate business rules into conditional SQL.
+
+### Key Takeaway
+
+Conditional logic allows SQL to transform numerical values into meaningful business categories, making results easier to interpret in reports, dashboards and customer-segmentation analyses.
