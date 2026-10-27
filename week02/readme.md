@@ -82,3 +82,26 @@ WHERE o.order_id IS NULL;
 ### Key Takeaway
 
 JOINs connect related information stored across multiple tables. Combining JOINs with aggregation allows SQL to produce useful business reports from relational data.
+
+Week 2 — Day 2: Combining SQL Filters
+Today's focus
+Combine conditions with AND, OR, and parentheses. This stays within Week 2: Filtering of the SQL roadmap.
+Key concepts
+- AND: every condition must be true for a row to be returned.
+- OR: at least one condition must be true.
+- Parentheses (): show which conditions belong together, especially when a query mixes AND and OR.
+- BETWEEN low AND high: includes both the lower and upper boundaries.
+- Date filters: in PostgreSQL, a date literal can be written as DATE '2026-10-07'.
+Example
+SELECT order_id, customer_id, order_date, order_amount
+FROM orders
+WHERE order_amount > 7000
+  AND order_date >= DATE '2026-10-07'
+ORDER BY order_amount DESC;
+This returns only orders where both conditions are true: the amount is above 7,000 and the date is 7 October 2026 or later.
+Important reminder
+SQL evaluates AND before OR. When you intend a particular logical grouping, use parentheses instead of relying on precedence.
+Practice file
+Open week02_day02.sql for four worked examples and eight practice queries with solutions.
+Roadmap boundary
+Today's lesson covers filtering only. Aggregation is scheduled for Week 3, and JOINs are scheduled for Week 4. Earlier bonus exposure to those topics does not count as completing those roadmap weeks.
