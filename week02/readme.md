@@ -83,7 +83,7 @@ WHERE o.order_id IS NULL;
 
 JOINs connect related information stored across multiple tables. Combining JOINs with aggregation allows SQL to produce useful business reports from relational data.
 
-Week 2 — Day 2: Combining SQL Filters
+## Week 2 — Day 2: Combining SQL Filters
 Today's focus
 Combine conditions with AND, OR, and parentheses. This stays within Week 2: Filtering of the SQL roadmap.
 Key concepts
@@ -105,3 +105,84 @@ Practice file
 Open week02_day02.sql for four worked examples and eight practice queries with solutions.
 Roadmap boundary
 Today's lesson covers filtering only. Aggregation is scheduled for Week 3, and JOINs are scheduled for Week 4. Earlier bonus exposure to those topics does not count as completing those roadmap weeks.
+## Day 3: SQL JOINs
+
+Practised matching customer records with their orders.
+
+Concepts Covered
+
+INNER JOIN
+
+LEFT JOIN
+
+Matching tables using ON
+
+Filtering conditions in ON versus WHERE
+
+Finding customers who have never placed orders
+
+Finding orders without matching customers
+
+Using IS NULL and IS NOT NULL to identify unmatched records
+
+Using DISTINCT to return unique customers
+
+Filtering joined results by city, order amount, and order date
+
+Sorting results using ORDER BY
+
+Practice File
+
+week02_day03.sql — SQL JOIN practice and challenge solutions.
+
+Database Tables
+
+customer
+
+Contains customer information, including:
+
+customer_id
+
+customer_name
+
+city
+
+orders
+
+Contains order information, including:
+
+order_id
+
+customer_id
+
+order_date
+
+order_amount
+
+Key Learnings
+
+INNER JOIN returns rows with matching records in both tables.
+
+LEFT JOIN preserves all rows from the left table.
+
+ON determines which rows match.
+
+WHERE filters the resulting rows.
+
+A LEFT JOIN followed by WHERE o.order_id IS NULL can identify customers without orders.
+
+The table placed on the left side of a LEFT JOIN determines which records are preserved.
+
+Tools Used
+
+PostgreSQL
+
+SQL
+
+Visual Studio Code
+
+Git and GitHub
+
+Learning Goal
+
+Build strong SQL skills through daily practice and follow my SQL learning roadmap in the correct order.
