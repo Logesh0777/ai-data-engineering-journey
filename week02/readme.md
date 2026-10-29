@@ -186,3 +186,96 @@ Git and GitHub
 Learning Goal
 
 Build strong SQL skills through daily practice and follow my SQL learning roadmap in the correct order.
+
+## Week 2 — Day 4: SQL JOINs Practice
+
+### Overview
+
+Today's focus was on SQL JOINs using a practical customer and orders database.
+The exercises simulate common business reporting tasks found in retail, sales
+operations and ERP systems.
+
+**Topics covered**
+- INNER JOIN
+- LEFT JOIN
+- Filtering joined data with ON and WHERE
+- Finding customers without matching orders
+- Handling NULL values
+- DISTINCT to prevent duplicate customer records
+- Filtering by city and order amount
+- Sorting results using multiple columns
+- Preserving customers who have no orders
+- Building customer-order reports
+
+### Database Tables
+
+**customer**
+- customer_id
+- customer_name
+- city
+
+**orders**
+- order_id
+- customer_id
+- order_date
+- order_amount
+
+Relationship: `customer.customer_id` connects to `orders.customer_id`.
+
+### Business Scenarios Practised
+
+1. Find customers in selected cities and match only qualifying orders.
+2. Find customers with orders above a specified amount.
+3. Identify customers without orders meeting a condition.
+4. List each qualifying customer only once.
+5. Find customers who have never placed an order.
+6. Retrieve orders below a specified amount.
+7. Display every customer, including customers without orders.
+8. Generate an order report for a specific city.
+9. Identify customers who have no orders below a threshold.
+10. Generate a date-filtered customer-order report.
+
+### Key Learnings
+
+- INNER JOIN returns rows with matching records in both tables.
+- LEFT JOIN preserves every row from the left table.
+- Conditions in ON control which records match.
+- WHERE filters the rows returned by the join.
+- LEFT JOIN combined with IS NULL helps identify records without matches.
+- DISTINCT helps return unique customers when several orders qualify.
+- ORDER BY supports predictable business reporting.
+
+### Practical Skills Checklist
+
+Use this checklist to evaluate independent skills.
+
+- [ ] Choose INNER JOIN or LEFT JOIN based on a requirement.
+- [ ] Connect tables using the correct relationship.
+- [ ] Apply filtering conditions in ON and WHERE appropriately.
+- [ ] Find customers who have never placed an order.
+- [ ] Preserve customers with no matching orders.
+- [ ] Return unique customers when multiple orders qualify.
+- [ ] Apply multiple sorting conditions correctly.
+- [ ] Explain the result of a JOIN without relying on a tutorial.
+- [ ] Solve a business reporting problem independently.
+- [ ] Complete all 10 daily practice problems and review their outputs.
+
+### Employability Connection
+
+These JOIN techniques are useful for:
+- Customer and sales reporting
+- Order management
+- Retail analytics
+- ERP reporting
+- Data cleaning and validation
+- Preparing datasets for BI dashboards
+- Building data pipelines for analytics and AI applications
+
+### Next Steps
+
+Continue practising SQL JOINs before progressing to the next topic.
+
+The long-term goal is to use SQL, Excel, Power BI, Python, data engineering,
+cloud services and AI to build an integrated end-to-end data platform.
+
+**Repository:** [ai-data-engineering-journey](https://github.com/Logesh0777/ai-data-engineering-journey)
