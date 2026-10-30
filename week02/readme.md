@@ -278,4 +278,152 @@ Continue practising SQL JOINs before progressing to the next topic.
 The long-term goal is to use SQL, Excel, Power BI, Python, data engineering,
 cloud services and AI to build an integrated end-to-end data platform.
 
-**Repository:** [ai-data-engineering-journey](https://github.com/Logesh0777/ai-data-engineering-journey)
+## Week 2 — Day 5: SQL Multi-Table JOINs
+
+### Overview
+
+Today's session focused on joining three related business tables using practical retail and financial reporting scenarios.
+
+The exercises simulate business requirements from retail companies, finance departments and ERP systems.
+
+**Topic:** Joining `customer`, `orders` and `payments` tables.
+
+### Database Structure
+
+Three related tables were used:
+
+**1. customer**
+
+| Column | Description |
+|---|---|
+| customer_id | Unique customer identifier |
+| customer_name | Customer name |
+| city | Customer location |
+
+**2. orders**
+
+| Column | Description |
+|---|---|
+| order_id | Unique order identifier |
+| customer_id | Customer reference |
+| order_date | Order date |
+| order_amount | Total order value |
+
+**3. payments**
+
+| Column | Description |
+|---|---|
+| payment_id | Unique payment transaction identifier |
+| order_id | Related order identifier |
+| payment_method | UPI, Card, Net Banking |
+| payment_status | Completed, Pending, Failed |
+| paid_amount | Amount paid in the transaction |
+
+**Table relationships:**
+
+- `customer.customer_id` → `orders.customer_id`
+- `orders.order_id` → `payments.order_id`
+
+### Concepts Practised
+
+- Joining three related tables.
+- Multiple INNER JOIN operations.
+- Multiple LEFT JOIN operations.
+- Understanding primary-key and foreign-key relationships.
+- Filtering records across multiple tables.
+- Using ON conditions with LEFT JOIN.
+- Understanding the difference between ON and WHERE.
+- Handling unmatched records using NULL.
+- Finding orders without successful payments.
+- Understanding one-to-many relationships.
+- Creating customer and payment reconciliation reports.
+- Sorting business reports using multiple columns.
+
+### Business Problems Solved
+
+1. Generate a successful payment transaction report.
+2. Identify failed and pending payments.
+3. Generate completed payment reports by customer city.
+4. Identify UPI transactions associated with high-value orders.
+5. Generate complete customer payment activity reports.
+6. Identify orders without successful payments.
+7. Generate regional payment performance reports.
+8. Retrieve payment transactions within a specified order date range.
+9. Generate customer payment reconciliation reports.
+10. Generate regional order and payment reports while preserving customers without qualifying orders.
+
+### Key Learnings
+
+**1. Multiple-table JOINs**
+
+A query can connect three or more related tables using multiple JOIN conditions.
+
+**2. LEFT JOIN with conditions**
+
+Conditions placed inside ON can restrict matching records without removing unmatched rows from the left table.
+
+**3. Payment reconciliation**
+
+LEFT JOIN combined with IS NULL can identify orders that do not have a matching completed payment.
+
+**4. One-to-many relationships**
+
+One customer may have multiple orders, and one order may have multiple payment transactions.
+
+**5. Business reporting**
+
+JOINs allow information stored in separate tables to be combined into meaningful reports.
+
+### Practical Skills Checklist
+
+- [ ] Join three related tables correctly.
+- [ ] Identify primary keys and foreign keys.
+- [ ] Write multiple INNER JOIN operations.
+- [ ] Write multiple LEFT JOIN operations.
+- [ ] Apply filters across multiple tables.
+- [ ] Understand ON versus WHERE conditions.
+- [ ] Preserve unmatched customer and order records.
+- [ ] Identify orders without completed payments.
+- [ ] Handle one-to-many payment relationships.
+- [ ] Generate customer-payment reconciliation reports.
+- [ ] Solve multi-table business problems independently.
+
+### Performance Review
+
+**Daily target:** 10 SQL problems.
+
+- Problems attempted: 10/10.
+- Correct on first attempt: 9/10.
+- Problem requiring correction: Problem 6.
+
+The correction exercise covered identifying orders without completed payment transactions.
+
+### Employability Connection
+
+These SQL concepts are useful for:
+
+- Retail sales analytics.
+- Financial transaction reporting.
+- Customer relationship management.
+- ERP data reporting.
+- Payment reconciliation.
+- Business intelligence.
+- Preparing structured datasets for ETL pipelines.
+- Building datasets for Power BI dashboards.
+
+### Future Project Connection
+
+The customer, orders and payments database will become part of a larger retail analytics project.
+
+The future project will gradually incorporate:
+- Customer analytics.
+- Sales performance.
+- Payment reconciliation.
+- Product and inventory management.
+- Supplier information.
+- SQL-based data processing.
+- Power BI dashboards.
+- Python-based ETL pipelines.
+
+**Long-term objective:** Build an integrated end-to-end retail data and AI platform.
+
